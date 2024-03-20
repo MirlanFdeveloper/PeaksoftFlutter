@@ -62,7 +62,7 @@ const Divider(
       phoneNumber = number;
     },
     decoration: const InputDecoration(
-      fillColor: Colors.white,
+      fillColor: Color.fromARGB(255, 221, 216, 216),
       filled: true,
       border: OutlineInputBorder(),
       prefixIcon: Icon(Icons.phone),
