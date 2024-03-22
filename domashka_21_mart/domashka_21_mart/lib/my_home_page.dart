@@ -1,5 +1,5 @@
 
-
+import 'package:domashka_21_mart/second_page.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -13,11 +13,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
       
-       Stack(
-        
-        children: [
+      body:
           Container(
             height: double.infinity,
             width: double.infinity,
@@ -26,17 +23,20 @@ class _MyHomePageState extends State<MyHomePage> {
               fit: BoxFit.cover,
               ),
             ),
-          ),
-          const Center(
+            child:Column(children: [
+const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(image: NetworkImage('https://toplogos.ru/images/logo-lays.png'),
                 ),
+
+                SizedBox(height: 50,),
+
                 Text('BARDSLEY',
                 
                 style: TextStyle(
-                  color: Colors.red,
+                  color: Colors.pink,
                   fontSize: 70,
                   fontWeight: FontWeight.w500,
 
@@ -44,9 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Text('ENGLAND',
                 style: TextStyle(
-                  color: Color.fromARGB(255, 140, 14, 5),
+                  color: Colors.pink,
                   fontSize: 30,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w600,
 
                 ),
                 ),
@@ -55,13 +55,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
             ),
-            
+           
           ),
+          const SizedBox(height: 100,),
 
+ElevatedButton(
+  style: ElevatedButton.styleFrom(backgroundColor:  Colors.pink),
+  onPressed: () {
+  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const SeconPage()));
+  }, child: const Text('Push',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400),
+  ),
+  ),
 
-        ],
-      ),
-      
+            ],
+            ) ,
+          ),
+          
         );
   }
 }
