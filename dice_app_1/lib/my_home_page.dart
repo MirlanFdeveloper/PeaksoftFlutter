@@ -39,7 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
               fontSize: 50,
               fontWeight: FontWeight.w600),
               ),
+
               const SizedBox(height: 30,),
+
+
        Padding(
          padding: const EdgeInsets.symmetric(horizontal: 10,),
 
